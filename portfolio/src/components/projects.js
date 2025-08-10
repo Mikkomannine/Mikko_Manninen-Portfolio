@@ -5,9 +5,9 @@ import EasyBank from "../projects/easybank";
 const Projects = () => {
     return (
         <div className="projects">
-            <h1>Projects</h1>
-            <Qaoa />
+            <h2>Projects</h2>
             <ImgGallery />
+            <Qaoa />
             <EasyBank />
         </div>
     );
