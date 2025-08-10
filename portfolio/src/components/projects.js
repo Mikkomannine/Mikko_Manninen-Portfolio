@@ -1,6 +1,6 @@
 import Qaoa from "../projects/qaoa";
 import ImgGallery from "../projects/imgalleri";
-import EasyBank from "../projects/easybank";
+import EasyBank from "../projects/easybank.js";
 
 const Projects = () => {
     return (

@@ -71,24 +71,64 @@
   border-radius: 50%;
 }
 
+.projects {
+  margin-top: 50px;
+}
+
 .projects h2 {
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff66, 0 0 20px #00f0ff33;
 }
 
-.project {
-  border: 1px solid #78f0ce;
+.imgalleri, .qaoa, .easybank {
   border-radius: 10px;
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 0 10px rgba(120, 240, 206, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project h2 {
+.imgalleri {
+  border: 1px solid #78f0ce;
+  box-shadow: 0 0 10px #78f0ce;
+}
+.qaoa {
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.easybank {
+  border: 1px solid hsl(99, 86%, 64%);
+  box-shadow: 0 0 10px hsl(99, 86%, 64%);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-link:hover .imgalleri, .project-link:hover .qaoa, .project-link:hover .easybank {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.imgalleri h2 {
   font-family: 'Orbitron', sans-serif;
   color: #78f0ce;
+  text-shadow: 0 0 5px #78f0ce, 0 0 10px #78f0ce66, 0 0 20px #78f0ce33;
+}
+
+.qaoa h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00f0ff;
   text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff66, 0 0 20px #00f0ff33;
 }
+
+.easybank h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: hsl(99, 86%, 64%);
+  text-shadow: 0 0 5px hsl(99, 86%, 64%), 0 0 10px hsl(99, 86%, 64%66), 0 0 20px hsl(99, 86%, 64%33);
+}
+
 .project-header {
   display: flex;
   align-items: center;
@@ -97,15 +137,25 @@
 .project-image {
   max-width: 100px;
   height: auto;
+  margin-right: 10px;
+}
+
+.easybank img {
+  border-radius: 10px;
 }
 
 @media (max-width: 700px) {
   .me {
     max-width: 100%;
+    margin: 10px;
+  }
+
+  .technologies-container {
+    margin: 10px;
   }
 
   .technologies {
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
   }
