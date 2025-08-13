@@ -1,15 +1,18 @@
+import { useTranslation } from "react-i18next";
 
-const me = () => {
+const Me = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="me">
             <div className="profile-header">
                 <h1>Mikko Manninen</h1>
                 <img src="images/mikko.png" alt="Mikko Manninen" className="profile-pic" />
             </div>
-            <p>I am a software engineering student from Finland specializing in full-stack development.</p>
+            <p>{t("description")}</p>
         </div>
     );
 };
 
 
-export default me;
+export default Me;

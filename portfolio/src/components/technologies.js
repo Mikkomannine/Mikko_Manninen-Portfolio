@@ -1,18 +1,32 @@
+import { useTranslation } from "react-i18next";
+
 
 const Technologies = () => {
+    const { t } = useTranslation();
+    const techList = [
+        { src: "images/react.png", name: "React" },
+        { src: "images/java.png", name: "Java" },
+        { src: "images/git.png", name: "Git" },
+        { src: "images/nodejs.png", name: "Node.js" },
+        { src: "images/python.png", name: "Python" }
+    ];
+
     return (
         <div className="technologies-container">
             <div className="technologies-header">
-                <h2>Preferred Tools & Frameworks</h2>
+                <h2>{t("technologies")}</h2>
             </div>
             <div className="technologies">
-                <img src="images/react.png" alt="React" className="tech-pic" />
-                <img src="images/java.png" alt="Java" className="tech-pic" />
-                <img src="images/git.png" alt="Git" className="tech-pic" />
-                <img src="images/nodejs.png" alt="Node.js" className="tech-pic" />
-                <img src="images/python.png" alt="Python" className="tech-pic" />
+                {techList.map((tech, index) => (
+                    <div className="tech-item" key={index}>
+                        <img src={tech.src} alt={tech.name} className="tech-pic" />
+                        <span className="tech-name">{tech.name}</span>
+                    </div>
+                ))}
             </div>
         </div>
     );
-}
+};
+
 export default Technologies;
+

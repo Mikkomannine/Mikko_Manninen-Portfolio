@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   background-color: black;
-  max-height: 200vh;
   color: rgb(197, 252, 255);
 }
 
@@ -65,22 +64,54 @@
   gap: 20px;
 }
 
+.tech-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-pic {
+  width: 70px;
+  transition: transform 0.3s ease;
+}
+
+.tech-name {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.tech-item:hover .tech-pic {
+  transform: scale(1.1);
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .technologies img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.projects {
+.projects, .education {
   margin-top: 50px;
 }
 
-.projects h2 {
+.projects h2, .education h2 {
   font-family: 'Orbitron', sans-serif;
   text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff66, 0 0 20px #00f0ff33;
 }
 
-.imgalleri, .qaoa, .easybank {
+.imgalleri, .qaoa, .easybank, .metropolia, .seoultech {
   border-radius: 10px;
   padding: 20px;
   margin: 20px 0;
@@ -107,7 +138,7 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project-link:hover .imgalleri, .project-link:hover .qaoa, .project-link:hover .easybank {
+.project-link:hover .imgalleri, .project-link:hover .qaoa, .project-link:hover .easybank, .project-link:hover .metropolia, .project-link:hover .seoultech {
   transform: translateY(-5px) scale(1.03);
 }
 
@@ -129,12 +160,12 @@
   text-shadow: 0 0 5px hsl(99, 86%, 64%), 0 0 10px hsl(99, 86%, 64%66), 0 0 20px hsl(99, 86%, 64%33);
 }
 
-.project-header {
+.project-header, .education-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.project-image {
+.project-image, .education-image {
   max-width: 100px;
   height: auto;
   margin-right: 10px;
@@ -144,6 +175,104 @@
   border-radius: 10px;
 }
 
+.metropolia {
+  text-align: left;
+  border: 1px solid #f8bb20;
+  box-shadow: 0 0 10px #f8bb20;
+}
+
+.metropolia img {
+  border-radius: 10px;
+}
+
+.metropolia h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px #f8bb20, 0 0 10px #f8bb2066, 0 0 20px #f8bb2033;
+}
+
+.metropolia p {
+  word-break: break-word;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.seoultech {
+  text-align: left;
+  border: 1px solid white;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.seoultech img {
+  border-radius: 10px;
+}
+
+.seoultech h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #00f0ff66, 0 0 20px #00f0ff33;
+}
+
+.seoultech p {
+  word-break: break-word;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.links {
+  margin-top: 50px;
+  border: 1px solid #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.links a {
+  color: #00f0ff;
+  text-decoration: underline;
+  font-family: 'Orbitron', sans-serif;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.links h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff66, 0 0 20px #00f0ff33;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0px 20px 20px 20px;
+  margin: 0px;
+}
+.links a:hover {
+  color: rgb(24, 79, 169);
+}
+
+/* e.g., src/css/langswitch.css */
+.langswitch { 
+  display: inline-flex; 
+  gap: 8px; 
+  align-items: center;
+  margin-top: 50px;
+ }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px; border-radius: 10px; border: 1px solid #2a2a2a;
+  background: #0b0b0b; color: #cfffff; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s;
+}
+.lang-btn:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 0 12px #00f0ff55; }
+.lang-btn.active { border-color: #00f0ff; box-shadow: 0 0 14px #00f0ff66 inset; }
+.langswitch select {
+  background:#0b0b0b; color:#cfffff; border:1px solid #2a2a2a; border-radius:10px; padding:6px 10px;
+}
+.sr-only { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); }
+
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
 @media (max-width: 700px) {
   .me {
     max-width: 100%;
@@ -164,5 +293,12 @@
     width: 40px;
     height: 40px;
   }
-  
+
+  .education-header {
+    align-items: start;
+  }
+  .education-image {
+    margin-top: 25px;
+  }
+
 }
