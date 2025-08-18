@@ -279,6 +279,11 @@
     margin: 10px;
   }
 
+  .me p {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .technologies-container {
     margin: 10px;
   }
@@ -294,6 +299,13 @@
     height: 40px;
   }
 
+  .projects {
+    margin: 10px;
+  }
+
+  .education {
+    margin: 10px;
+  }
   .education-header {
     align-items: start;
   }
