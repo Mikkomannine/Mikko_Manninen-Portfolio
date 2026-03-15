@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 const Seoultech = () => {
   const { t } = useTranslation();
   return (
-        <a className="project-link" href="https://en.seoultech.ac.kr/" target="_blank" rel="noopener noreferrer">
+        <a className="project-link" href="./documents/transcript_seoultech.pdf" target="_blank" rel="noopener noreferrer">
             <div className="seoultech">
                 <div className="education-header">
                     <img src="./images/seoultech.png" alt="Seoultech" className="education-image" />
